@@ -10,7 +10,8 @@
 */
 
 // Classic recursive implementation
-// Time complexity: 
+// Time complexity: O(2^n)
+// Space complexity: O(n)
 const fib = (n) => {
 	if (n <= 2) return 1; // First two positions equal 1, so we return 1
 
@@ -29,6 +30,9 @@ const fib = (n) => {
 // 		keys will be arg to fn,
 // 		value will be the return value
 
+// Time complexity: O(2n) --> O(n)
+// Space complexity: O(n)
+
 // Memo object is empty and default value is empty for the top level function call
 const fibMemo = (n, memo = {}) => {
 	// Use already calculated value
@@ -45,5 +49,7 @@ console.log(fibMemo(6)); // 8
 console.log(fibMemo(7)); // 13
 console.log(fibMemo(8)); // 21
 console.log(fibMemo(50)); // 12586269025
+
+//
 
 // ==================================================================================
